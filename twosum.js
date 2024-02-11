@@ -31,4 +31,5 @@ var twoSum = function (nums, target) {
   return null;
 };
 
+// Test the function and log the oututs
 console.log(twoSum(nums, target));
