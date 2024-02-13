@@ -10,7 +10,7 @@ let target = 9;
 
 var twoSum = function (nums, target) {
   // Create an empty object to store the index of each number in the array
-  const numIncides = {};
+  const numIndices = {};
 
   // Use a for loop to iterate through the array of numbers
   for (let i = 0; i < nums.length; i++) {
@@ -20,12 +20,12 @@ var twoSum = function (nums, target) {
     const result = target - num;
 
     // Use an if statement to check if the differece (result) is already in the numIndices object
-    if (result in numIncides) {
+    if (result in numIndices) {
       // Return the index of the result and the current index
-      return [numIncides[result], i];
+      return [numIndices[result], i];
     }
     // If the difference (result) is not in the numIndices, store the current number's index and restart the for loop from the current index
-    numIncides[num] = i;
+    numIndices[num] = i;
   }
   // If no pairs within the table are found equaling to the target, return null
   return null;
