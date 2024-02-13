@@ -20,13 +20,22 @@ var twoSum = function (nums, target) {
     const result = target - num;
 
     // Use an if statement to check if the differece (result) is already in the numIndices object
-    if (result in numIndices) {
+
+    // if (result in numIndices) {
+    //   // Return the index of the result and the current index
+    //   return [numIndices[result], i];
+    // }
+
+    // A while loop could also replace the if statement
+    while (result in numIndices) {
       // Return the index of the result and the current index
       return [numIndices[result], i];
     }
+
     // If the difference (result) is not in the numIndices, store the current number's index and restart the for loop from the current index
     numIndices[num] = i;
   }
+
   // If no pairs within the table are found equaling to the target, return null
   return null;
 };
